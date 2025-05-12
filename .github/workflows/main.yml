@@ -8,9 +8,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14'
-      - name: Run a one-line script
-        run: node -v
+      - name: Use a secret
+        run: echo ${{ secrets.MY_SECRET }}
